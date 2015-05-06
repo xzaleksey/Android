@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Layouts.iml" filepath="$PROJECT_DIR$/Layouts.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/p0072layoutsprop/p0072layoutsprop.iml" filepath="$PROJECT_DIR$/p0072layoutsprop/p0072layoutsprop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0081viewbyid/p0081viewbyid.iml" filepath="$PROJECT_DIR$/p0081viewbyid/p0081viewbyid.iml" />
       <module fileurl="file://$PROJECT_DIR$/ru.startandroid.p0061layouts/ru.startandroid.p0061layouts.iml" filepath="$PROJECT_DIR$/ru.startandroid.p0061layouts/ru.startandroid.p0061layouts.iml" />
     </modules>
   </component>

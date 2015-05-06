@@ -1,10 +1,9 @@
-package propru.startandroid.p0072layouts;
+package p0061layouts.startandroid.ru.p0081viewbyid;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,9 +11,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.marginlayout);
-        TextView myTextView = (TextView) findViewById(R.id.myText);
-        myTextView.setText("New text! Hi Ксения ^^)");
+        setContentView(R.layout.activity_main);
     }
 
     @Override
