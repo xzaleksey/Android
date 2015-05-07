@@ -12,9 +12,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/onclickbuttons" />
-            <option value="$PROJECT_DIR$/p0072layoutsprop" />
-            <option value="$PROJECT_DIR$/p0081viewbyid" />
-            <option value="$PROJECT_DIR$/ru.startandroid.p0061layouts" />
           </set>
         </option>
       </GradleProjectSettings>

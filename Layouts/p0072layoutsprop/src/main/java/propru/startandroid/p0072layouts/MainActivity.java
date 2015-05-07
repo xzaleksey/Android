@@ -15,6 +15,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.marginlayout);
         TextView myTextView = (TextView) findViewById(R.id.myText);
         myTextView.setText("New text! Hi Ксения ^^)");
+
     }
 
     @Override
