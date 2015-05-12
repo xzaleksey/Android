@@ -61,6 +61,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.btnOk:
                 // кнопка ОК
                 Log.d(TAG, "кнопка ОК");
+
                 tvOut.setText("Нажата кнопка ОК");
                 Toast.makeText(this, "Нажата кнопка ОК", Toast.LENGTH_LONG).show();
                 break;

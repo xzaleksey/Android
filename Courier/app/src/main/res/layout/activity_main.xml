@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
-    >
+    android:background="#ff333735">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -22,16 +21,15 @@
 
         <RelativeLayout
             android:id="@+id/input"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title"
-            >
+            android:layout_centerHorizontal="true">
 
             <TextView
                 android:id="@+id/text_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:text="Login:" />
 
@@ -39,7 +37,6 @@
                 android:id="@+id/login"
                 android:layout_width="240dp"
                 android:layout_height="30dp"
-                android:layout_marginRight="20dp"
                 android:layout_toRightOf="@id/text_login"
                 android:background="#32ffffff" />
 
@@ -48,8 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_login"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="3dp"
                 android:layout_marginTop="20dp"
                 android:text="Password:" />
 
@@ -58,10 +54,10 @@
                 android:layout_width="240dp"
                 android:layout_height="30dp"
                 android:layout_below="@id/text_login"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_toRightOf="@id/text_password"
-                android:background="#32ffffff" />
+                android:background="#32ffffff"
+                android:inputType="textPassword" />
         </RelativeLayout>
 
 
