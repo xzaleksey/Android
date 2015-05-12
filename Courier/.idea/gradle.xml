@@ -10,12 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/activitylistener" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/listener" />
-            <option value="$PROJECT_DIR$/logandmess" />
-            <option value="$PROJECT_DIR$/onclickbuttons" />
-            <option value="$PROJECT_DIR$/resvalues" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Lessons.iml" filepath="$PROJECT_DIR$/Lessons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activitylistener/activitylistener.iml" filepath="$PROJECT_DIR$/activitylistener/activitylistener.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listener/listener.iml" filepath="$PROJECT_DIR$/listener/listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logandmess/logandmess.iml" filepath="$PROJECT_DIR$/logandmess/logandmess.iml" />
       <module fileurl="file://$PROJECT_DIR$/onclickbuttons/onclickbuttons.iml" filepath="$PROJECT_DIR$/onclickbuttons/onclickbuttons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resvalues/resvalues.iml" filepath="$PROJECT_DIR$/resvalues/resvalues.iml" />
     </modules>
   </component>
 </project>

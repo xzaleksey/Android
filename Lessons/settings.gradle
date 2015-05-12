@@ -1,1 +1,1 @@
-include ':app', ':onclickbuttons'
+include ':app', ':onclickbuttons', ':listener', ':activitylistener', ':resvalues', ':logandmess'

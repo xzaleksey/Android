@@ -1,1 +1,0 @@
-include ':app', ':ru.startandroid.p0061layouts', ':p0072layoutsprop', ':p0081viewbyid', ':onclickbuttons'
