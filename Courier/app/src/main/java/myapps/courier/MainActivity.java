@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String password = eLogin.getText().toString();
                 if (eLogin.getText().toString().trim().equals("admin") && ePassword.getText().toString().trim().equals("admin")) {
                     Toast.makeText(this, "Авторизация успешна!", Toast.LENGTH_SHORT).show();
+                    DomFeedParser domFeedParser = new DomFeedParser();
+                    domFeedParser.parseXml();
                 } else {
                     Toast.makeText(this, "Неправильный логин или пароль!", Toast.LENGTH_SHORT).show();
                 }

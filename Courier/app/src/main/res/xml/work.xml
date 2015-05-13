@@ -1,0 +1,132 @@
+<resources>
+	<order>
+		<index>1</index>
+		<name>Балакин Александр Петрович</name>
+		<time>10:00 до 12:00</time>
+		<phone>8 906 619 80 17</phone>
+		<address>ул. Большая Бронная д. 17</address>
+		<product>Тапочки зеленые. Цена: 1099р.</product>
+	</order>
+	<order>
+		<index>2</index>
+		<name>Ванцевич Анна Игоревна</name>
+		<time>10:00 до 12:00</time>
+		<phone>8 499 516 03 25</phone>
+		<address>ул. Успенский пер. д. 4, кв. 23 </address>
+		<product>Платье желтое. Цена: 4500р.</product>
+	</order>
+	<order>
+		<index>3</index>
+		<name>Косков Петр Васильевич</name>
+		<time>11:00 до 13:00</time>
+		<phone>8 499 987 23 50</phone>
+		<address>ул. Чаянова д. 18, кв. 61</address>
+		<product>Халат вечерний. Цена: 2860р.</product>
+		<comments>3й подъезд. Домофон: 2В3480</comments>
+	</order>
+	<order>
+		<index>4</index>
+		<name>Васейкин Иван Сергеевич</name>
+		<time>11:00 до 13:00</time>
+		<phone>8 916 553 85 20</phone>
+		<address>ул. Лесная д. 43</address>
+		<product>Набор инструментов. Цена: 3100р.</product>
+		<comments>Звонить за 1,5 до приезда.</comments>
+	</order>
+	<order>
+		<index>5</index>
+		<name>Петрова Ольга Юрьевна</name>
+		<time>11:00 до 13:00</time>
+		<phone>8 915 408 71 93</phone>
+		<address>ул. Правды д.23</address>
+		<product>Япоский кофе. Цена: 980р.</product>
+	</order>
+	<order>
+		<index>6</index>
+		<name>Каблуков Андрей Михайлович</name>
+		<time>13:00 до 15:00</time>
+		<phone>8 903 852 52 76</phone>
+		<address>ул. Верхняя д.15к2, кв.97</address>
+		<product>Книга "Бывалый". Цена: 1300р.</product>
+		<comments>Домофон: 2270К9700, 9 этаж.</comments>
+	</order>
+	<order>
+		<index>7</index>
+		<name>Серотина Екатерина Ивановна</name>
+		<time>14:00 до 16:00</time>
+		<phone>8 499 008 11 69</phone>
+		<address>ул. Мишина д.28, кв. 15</address>
+		<product>Набор сковородок. Цена: 4800р.</product>
+		<comments>1й подъезд. Домофон: 15к2357</comments>
+	</order>
+	<order>
+		<index>8</index>
+		<name>Казачков Александр Алексеевич</name>
+		<time>14:00 до 16:00</time>
+		<phone>8 916 676 17 27</phone>
+		<address>ул. Волков переулок д.15с1</address>
+		<product>Видеокарта. Цена: 8569р.</product>
+		<comments>Будет на месте до 20:00</comments>
+	</order>
+	<order>
+		<index>9</index>
+		<name>Тур Дмитрий Сергеевич</name>
+		<time>14:00 до 16:00</time>
+		<phone>8 916 545 90 30</phone>
+		<address>ул. Спиридоновка д.15</address>
+		<product>Шапка желтая. Цена: 2500р.</product>
+		<comments>1й этаж. Парикмахерская "Оля"</comments>
+	</order>
+	<order>
+		<index>10</index>
+		<name>Городничий Роман Кирилович</name>
+		<time>15:00 до 17:00</time>
+		<phone>8 499 635 77 33</phone>
+		<address>ул. Скатерный переулок д.27</address>
+		<product>Зонт летний. Цена: 3299р.</product>
+		<comments>Здание дет-сада.</comments>
+	</order>
+	<order>
+		<index>11</index>
+		<name>Брускин Егор Юрьевич</name>
+		<time>15:00 до 17:00</time>
+		<phone>8 916 745 32 60</phone>
+		<address>ул. Переулок Капранова д.4</address>
+		<product>Свитер рыжий. Цена: 2800р.</product>
+	</order>
+	<order>
+		<index>12</index>
+		<name>Парсукова Ольга Валерьевна</name>
+		<time>17:00 до 19:00</time>
+		<phone>8 499 017 80 36</phone>
+		<address>ул. Николаева д.4, кв. 40</address>
+		<product>Шляпа соломенная. Цена: 2200р.</product>
+		<comments>Будет на месте до 20:00</comments>
+	</order>
+	<order>
+		<index>13</index>
+		<name>Ежов Евгений Андреевич</name>
+		<time>17:00 до 19:00</time>
+		<phone>8 903 107 45 01</phone>
+		<address>ул. Зорге д.24</address>
+		<product>Туфли черные. Цена: 3699р.</product>
+		<comments>Звонить за 2 часа до приезда.</comments>
+	</order>
+	<order>
+		<index>14</index>
+		<name>Малинина Анна Федоровна</name>
+		<time>17:00 до 19:00</time>
+		<phone>8 499 803 76 27</phone>
+		<address>ул. Маршала Бирюзова д.11, кв.3</address>
+		<product>Надувной матрас. Цена: 6 749</product>
+		<comments>Домофон: 82К5912</comments>
+	</order>
+	<order>
+		<index>15</index>
+		<name>Компаниец Александра Ивановна</name>
+		<time>18:00 до 20:00</time>
+		<phone>8 906 859 13 52</phone>
+		<address>ул. Маршала Конева д.12</address>
+		<product>Ночнушка фиолетовая. Цена: 1799р.</product>
+	</order>
+</resources>
