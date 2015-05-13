@@ -1,1 +1,1 @@
-include ':app', ':onclickbuttons', ':listener', ':activitylistener', ':resvalues', ':logandmess', ':menusimple'
+include ':app', ':onclickbuttons', ':listener', ':activitylistener', ':resvalues', ':logandmess', ':menusimple', ':menuadv', ':contextmenu', ':dynamiclayout', ':dynamiclayout2', ':dynamiclayout3'

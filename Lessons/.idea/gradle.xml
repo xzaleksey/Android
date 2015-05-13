@@ -12,8 +12,13 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/activitylistener" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/contextmenu" />
+            <option value="$PROJECT_DIR$/dynamiclayout" />
+            <option value="$PROJECT_DIR$/dynamiclayout2" />
+            <option value="$PROJECT_DIR$/dynamiclayout3" />
             <option value="$PROJECT_DIR$/listener" />
             <option value="$PROJECT_DIR$/logandmess" />
+            <option value="$PROJECT_DIR$/menuadv" />
             <option value="$PROJECT_DIR$/menusimple" />
             <option value="$PROJECT_DIR$/onclickbuttons" />
             <option value="$PROJECT_DIR$/resvalues" />

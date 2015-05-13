@@ -5,8 +5,13 @@
       <module fileurl="file://$PROJECT_DIR$/Lessons.iml" filepath="$PROJECT_DIR$/Lessons.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitylistener/activitylistener.iml" filepath="$PROJECT_DIR$/activitylistener/activitylistener.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contextmenu/contextmenu.iml" filepath="$PROJECT_DIR$/contextmenu/contextmenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamiclayout/dynamiclayout.iml" filepath="$PROJECT_DIR$/dynamiclayout/dynamiclayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamiclayout2/dynamiclayout2.iml" filepath="$PROJECT_DIR$/dynamiclayout2/dynamiclayout2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamiclayout3/dynamiclayout3.iml" filepath="$PROJECT_DIR$/dynamiclayout3/dynamiclayout3.iml" />
       <module fileurl="file://$PROJECT_DIR$/listener/listener.iml" filepath="$PROJECT_DIR$/listener/listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/logandmess/logandmess.iml" filepath="$PROJECT_DIR$/logandmess/logandmess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/menuadv/menuadv.iml" filepath="$PROJECT_DIR$/menuadv/menuadv.iml" />
       <module fileurl="file://$PROJECT_DIR$/menusimple/menusimple.iml" filepath="$PROJECT_DIR$/menusimple/menusimple.iml" />
       <module fileurl="file://$PROJECT_DIR$/onclickbuttons/onclickbuttons.iml" filepath="$PROJECT_DIR$/onclickbuttons/onclickbuttons.iml" />
       <module fileurl="file://$PROJECT_DIR$/resvalues/resvalues.iml" filepath="$PROJECT_DIR$/resvalues/resvalues.iml" />
