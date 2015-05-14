@@ -15,6 +15,8 @@
       <module fileurl="file://$PROJECT_DIR$/menusimple/menusimple.iml" filepath="$PROJECT_DIR$/menusimple/menusimple.iml" />
       <module fileurl="file://$PROJECT_DIR$/onclickbuttons/onclickbuttons.iml" filepath="$PROJECT_DIR$/onclickbuttons/onclickbuttons.iml" />
       <module fileurl="file://$PROJECT_DIR$/resvalues/resvalues.iml" filepath="$PROJECT_DIR$/resvalues/resvalues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpleanimation/simpleanimation.iml" filepath="$PROJECT_DIR$/simpleanimation/simpleanimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simplecalculator/simplecalculator.iml" filepath="$PROJECT_DIR$/simplecalculator/simplecalculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/xmlpullparser/xmlpullparser.iml" filepath="$PROJECT_DIR$/xmlpullparser/xmlpullparser.iml" />
     </modules>
   </component>

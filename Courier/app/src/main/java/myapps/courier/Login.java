@@ -1,5 +1,6 @@
 package myapps.courier;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -10,12 +11,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class Login extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
         Button btn_enter = (Button) findViewById(R.id.btn_enter);
         btn_enter.setOnClickListener(this);
     }
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.exit) {
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -53,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String password = eLogin.getText().toString();
                 if (eLogin.getText().toString().trim().equals("admin") && ePassword.getText().toString().trim().equals("admin")) {
                     Toast.makeText(this, "Авторизация успешна!", Toast.LENGTH_SHORT).show();
-                    DomFeedParser domFeedParser = new DomFeedParser();
-                    domFeedParser.parseXml();
+                    Intent intent = new Intent(this, MainForm.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(this, "Неправильный логин или пароль!", Toast.LENGTH_SHORT).show();
                 }

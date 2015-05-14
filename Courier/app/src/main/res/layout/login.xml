@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#ff333735">
+    style="@style/AppTheme">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -15,9 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:text="Введите Ваши данные"
-            android:textStyle="bold" />
+            android:layout_marginBottom="60dp"
+            android:text="Авторизация"
+            android:textStyle="bold"
+            android:textSize="30sp" />
 
         <RelativeLayout
             android:id="@+id/input"
@@ -30,7 +31,6 @@
                 android:id="@+id/text_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
                 android:text="Login:" />
 
             <EditText
@@ -38,7 +38,9 @@
                 android:layout_width="240dp"
                 android:layout_height="30dp"
                 android:layout_toRightOf="@id/text_login"
-                android:background="#32ffffff" />
+                android:background="#32ffffff"
+                android:layout_alignLeft="@+id/password"
+                android:text="admin"/>
 
             <TextView
                 android:id="@+id/text_password"
@@ -57,7 +59,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_toRightOf="@id/text_password"
                 android:background="#32ffffff"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:text="admin"/>
         </RelativeLayout>
 
 
@@ -67,7 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/input"
             android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
-            android:text="Войти" />
+            android:layout_margin="40dp"
+            android:text="Войти"
+            android:textColor="#c8000000"/>
     </RelativeLayout>
 </RelativeLayout>
