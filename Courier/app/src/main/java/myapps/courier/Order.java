@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 class Order implements Parcelable {
     int index;
-    String name,time,phone,address,product,comments;
+    String name,time,phone,address,product,comments="";
 
     public Order() {
     }

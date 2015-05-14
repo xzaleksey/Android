@@ -1,8 +1,11 @@
 package myapps.courier;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,8 +27,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        menu.add(0,1,0,"выход");
+        MenuItem item = menu.getItem(0);
+        SpannableString s = new SpannableString("Выход");
+        s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), 0);
+        item.setTitle(s);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -36,7 +44,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.exit) {
+        if (id == 1) {
             finish();
         }
 

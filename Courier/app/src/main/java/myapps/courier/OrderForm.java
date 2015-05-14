@@ -12,7 +12,20 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.order);
         Order order = (Order) getIntent().getParcelableExtra(Order.class.getCanonicalName());
         TextView orderName = (TextView)findViewById(R.id.orderName);
+        TextView orderAddress = (TextView)findViewById(R.id.orderAddress);
+        TextView orderPhone = (TextView)findViewById(R.id.orderPhone);
+        TextView orderTime = (TextView)findViewById(R.id.orderTime);
+        TextView orderProduct = (TextView)findViewById(R.id.orderProduct);
+        TextView orderComments = (TextView)findViewById(R.id.orderComments);
+
+        orderAddress.setText(order.address);
         orderName.setText(order.name);
+        orderPhone.setText("Телефон: " +order.phone);
+        orderTime.setText(order.time);
+        orderProduct.setText(order.product);
+        orderComments.setText(order.comments);
+
+
     }
 
     @Override

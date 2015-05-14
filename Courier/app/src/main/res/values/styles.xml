@@ -6,6 +6,7 @@
         <item name="android:textColor">#fffffffd</item>
         <item name="android:textSize">20sp</item>
         <item name="android:background">#ff333735</item>
+        <item name="android:actionMenuTextColor">#c8ffffff</item>
     </style>
 
 </resources>
