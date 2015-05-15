@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainForm extends AppCompatActivity implements View.OnClickListener {
-    LinearLayout llMain;
     final int wrapContent = RelativeLayout.LayoutParams.WRAP_CONTENT;
+    LinearLayout llMain;
     List<Order> orders = new ArrayList<>();
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class MainForm extends AppCompatActivity implements View.OnClickListener 
             btnNew.setOnClickListener(this);
             llMain.addView(btnNew, llParams);
         }
+
     }
 
     @Override

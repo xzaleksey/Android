@@ -30,4 +30,35 @@
         android:id="@+id/orderComments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Местоположени на карте"
+        android:textColor="@color/background_material_dark" />
+
+    <LinearLayout
+        android:id="@+id/llOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnSms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="СМС"
+            android:textColor="@color/background_material_dark" />
+
+        <Button
+            android:id="@+id/btnPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Фото"
+            android:textColor="@color/background_material_dark" />
+    </LinearLayout>
 </LinearLayout>

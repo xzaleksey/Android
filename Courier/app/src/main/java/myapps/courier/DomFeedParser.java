@@ -9,13 +9,12 @@ import java.io.IOException;
 import java.util.List;
 
 class DomFeedParser {
+    final String LOG_TAG = "myLogs";
     private Context c;
 
     public DomFeedParser(Context c) {
         this.c = c;
     }
-
-    final String LOG_TAG = "myLogs";
 
     void parseXml2(List<Order> orders) {
         String tmp = "";
@@ -50,16 +49,22 @@ class DomFeedParser {
                                     break;
                                 case "name":
                                     order.name = xpp.getText();
+                                    break;
                                 case "time":
                                     order.time = xpp.getText();
+                                    break;
                                 case "phone":
                                     order.phone = xpp.getText();
+                                    break;
                                 case "address":
                                     order.address = xpp.getText();
+                                    break;
                                 case "product":
                                     order.product = xpp.getText();
+                                    break;
                                 case "comments":
                                     order.comments = xpp.getText();
+                                    break;
                             }
                         } catch (Exception ex) {
 
