@@ -18,6 +18,7 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
     Button btnMap;
     TextView orderAddress;
     Button btnSms;
+    TextView orderPhone;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
         Order order = getIntent().getParcelableExtra(Order.class.getCanonicalName());
         TextView orderName = (TextView) findViewById(R.id.orderName);
         orderAddress = (TextView) findViewById(R.id.orderAddress);
-        TextView orderPhone = (TextView) findViewById(R.id.orderPhone);
+        orderPhone = (TextView) findViewById(R.id.orderPhone);
         TextView orderTime = (TextView) findViewById(R.id.orderTime);
         TextView orderProduct = (TextView) findViewById(R.id.orderProduct);
         TextView orderComments = (TextView) findViewById(R.id.orderComments);
@@ -40,6 +41,8 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
         btnMap.setOnClickListener(this);
         btnSms = (Button) findViewById(R.id.btnSms);
         btnSms.setOnClickListener(this);
+        Button btnDial = (Button) findViewById(R.id.btnDial);
+        btnDial.setOnClickListener(this);
 
     }
 
@@ -79,6 +82,11 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
                     }
                 });
                 alert.show();
+                break;
+            case R.id.btnDial:
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:" + orderPhone.getText().toString()));
+                startActivity(intent);
                 break;
         }
     }
