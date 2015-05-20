@@ -15,7 +15,7 @@ class Order implements Parcelable {
         }
     };
     int index;
-    String name,time,phone,address,product,comments="";
+    String name, time, phone, address, product, comments = "", completed = "";
 
     public Order() {
     }
@@ -29,7 +29,7 @@ class Order implements Parcelable {
         address = parcel.readString();
         product = parcel.readString();
         comments = parcel.readString();
-
+        completed = parcel.readString();
     }
 
     @Override
@@ -46,7 +46,7 @@ class Order implements Parcelable {
         parcel.writeString(address);
         parcel.writeString(product);
         parcel.writeString(comments);
-
+        parcel.writeString(completed);
     }
 
 

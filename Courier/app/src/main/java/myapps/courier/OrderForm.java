@@ -19,11 +19,12 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
     TextView orderAddress;
     Button btnSms;
     TextView orderPhone;
+    Order order;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order);
-        Order order = getIntent().getParcelableExtra(Order.class.getCanonicalName());
+        order = getIntent().getParcelableExtra(Order.class.getCanonicalName());
         TextView orderName = (TextView) findViewById(R.id.orderName);
         orderAddress = (TextView) findViewById(R.id.orderAddress);
         orderPhone = (TextView) findViewById(R.id.orderPhone);
@@ -43,7 +44,7 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
         btnSms.setOnClickListener(this);
         Button btnDial = (Button) findViewById(R.id.btnDial);
         btnDial.setOnClickListener(this);
-
+        findViewById(R.id.btnComplete).setOnClickListener(this);
     }
 
     void output(String s) {
@@ -71,16 +72,16 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
 
                 alert.setPositiveButton("Отправить", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
+
                         output("Отправлено!");
                         // Do something with value!
                     }
-                });
-
-                alert.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+                }).setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         output("Отмена");
                     }
                 });
+
                 alert.show();
                 break;
             case R.id.btnDial:
@@ -88,6 +89,58 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
                 intent.setData(Uri.parse("tel:" + orderPhone.getText().toString()));
                 startActivity(intent);
                 break;
+            case R.id.btnComplete:
+                final AlertDialog.Builder completeOrder = new AlertDialog.Builder(this);
+                AlertDialog completeDialog = completeOrder.create();
+                completeOrder.setTitle("Комментарии");
+                // alert.setMessage("Message");
+                final EditText comments = new EditText(this);
+                comments.setTextColor(Color.WHITE);
+                completeOrder.setView(comments);
+                completeOrder.setPositiveButton("Заказ выполнен",
+                        new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                        /*Write your code here */
+                                order.completed = comments.getText().toString();
+                                output("Заказ выполнен");
+                                dialog.dismiss();
+                            }
+                        });
+                completeOrder.setNegativeButton("Заказ не выполнен",
+                        new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                order.completed = comments.getText().toString();
+                                output("Заказ не выполнен");
+                                dialog.dismiss();
+
+                            }
+                        });
+
+//                completeOrder.setPositiveButton("Отправить", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int whichButton) {
+//                        output("Отправлено!");
+//                        // Do something with value!
+//                    }
+//                });
+//
+//                completeOrder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int whichButton) {
+//                        output("Отмена");
+//                    }
+//                });
+                completeOrder.show();
+                break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainForm.class);
+        intent.putExtra(Order.class.getCanonicalName(), order);
+        startActivity(intent);
     }
 }
