@@ -79,7 +79,16 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_weight="2"
-                    android:text="Позвонить"
+                    android:text="Вызов"
+                    android:textColor="@color/background_material_dark" />
+
+                <Button
+                    android:id="@+id/btnPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="2"
+                    android:text="Фото"
                     android:textColor="@color/background_material_dark" />
 
             </LinearLayout>

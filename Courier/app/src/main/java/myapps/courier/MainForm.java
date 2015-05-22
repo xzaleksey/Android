@@ -31,7 +31,9 @@ public class MainForm extends AppCompatActivity implements View.OnClickListener 
             DateFormat dateFormat = new SimpleDateFormat("HH");
             for (Order order : orders) {
                 if (order.completed.length() > 0) {
-                    findViewById(order.index).setVisibility(View.GONE);
+                    Button btn = (Button) findViewById(order.index);
+                    btn.setBackgroundColor(Color.WHITE);
+                    btn.setEnabled(false);
                 }
             }
         } catch (Exception e) {
@@ -104,5 +106,11 @@ public class MainForm extends AppCompatActivity implements View.OnClickListener 
         inflater.inflate(R.menu.menu_main, menu);
 
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
 }
