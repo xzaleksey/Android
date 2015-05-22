@@ -91,7 +91,6 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.btnComplete:
                 final AlertDialog.Builder completeOrder = new AlertDialog.Builder(this);
-                AlertDialog completeDialog = completeOrder.create();
                 completeOrder.setTitle("Комментарии");
                 // alert.setMessage("Message");
                 final EditText comments = new EditText(this);
