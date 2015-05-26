@@ -98,6 +98,7 @@ public class MainForm extends AppCompatActivity implements View.OnClickListener 
 //        intent.putExtra("address", orders.get(index).address);
         intent.putExtra(Order.class.getCanonicalName(), orders.get(index - 1));
         startActivity(intent);
+        this.finish();
     }
 
     @Override
@@ -110,7 +111,6 @@ public class MainForm extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
+        this.finish();
     }
 }

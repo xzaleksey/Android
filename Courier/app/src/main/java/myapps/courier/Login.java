@@ -21,14 +21,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         Button btn_enter = (Button) findViewById(R.id.btn_enter);
+        Button btn_exit = (Button) findViewById(R.id.btn_exit);
         btn_enter.setOnClickListener(this);
+        btn_exit.setOnClickListener(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         //getMenuInflater().inflate(R.menu.menu_main, menu);
-        menu.add(0,1,0,"выход");
+        menu.add(0, 1, 0, "выход");
         MenuItem item = menu.getItem(0);
         SpannableString s = new SpannableString("Выход");
         s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), 0);
@@ -45,7 +47,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         //noinspection SimplifiableIfStatement
         if (id == 1) {
-            finish();
+            this.finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -68,6 +70,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     Toast.makeText(this, "Неправильный логин или пароль!", Toast.LENGTH_SHORT).show();
                 }
                 break;
+            case R.id.btn_exit:
+                this.finish();
+                break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.finish();
     }
 }

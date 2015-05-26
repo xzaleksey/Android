@@ -102,7 +102,7 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                         /*Write your code here */
-                                order.completed = comments.getText().toString();
+                                order.completed = "Заказ выполнен " + comments.getText().toString();
                                 output("Заказ выполнен");
                                 dialog.dismiss();
                             }
@@ -112,7 +112,7 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                order.completed = comments.getText().toString();
+                                order.completed = "Заказ не выполнен " + comments.getText().toString();
                                 output("Заказ не выполнен");
                                 dialog.dismiss();
 
@@ -141,5 +141,6 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
         Intent intent = new Intent(this, MainForm.class);
         intent.putExtra(Order.class.getCanonicalName(), order);
         startActivity(intent);
+        this.finish();
     }
 }
