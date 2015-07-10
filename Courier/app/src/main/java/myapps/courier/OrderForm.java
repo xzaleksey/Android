@@ -138,9 +138,11 @@ public class OrderForm extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, MainForm.class);
-        intent.putExtra(Order.class.getCanonicalName(), order);
-        startActivity(intent);
+        //    Intent intent = new Intent(this, MainForm.class);
+        //  intent.putExtra(Order.class.getCanonicalName(), order);
+        Intent intent = new Intent();
+        intent.putExtra("completed", order.completed);
+        setResult(RESULT_OK, intent);
         this.finish();
     }
 }

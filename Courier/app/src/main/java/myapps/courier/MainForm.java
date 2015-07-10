@@ -21,14 +21,15 @@ public class MainForm extends AppCompatActivity implements View.OnClickListener 
     final int wrapContent = RelativeLayout.LayoutParams.WRAP_CONTENT;
     LinearLayout llMain;
     List<Order> orders = new ArrayList<>();
+    int index = 0;
 
     @Override
     protected void onStart() {
         super.onStart();
         try {
-            Order neworder = getIntent().getParcelableExtra(Order.class.getCanonicalName());
-            orders.set(neworder.index - 1, neworder);
-            DateFormat dateFormat = new SimpleDateFormat("HH");
+            //    Order neworder = getIntent().getParcelableExtra(Order.class.getCanonicalName());
+            //      orders.set(neworder.index - 1, neworder);
+            //  DateFormat dateFormat = new SimpleDateFormat("HH");
             for (Order order : orders) {
                 if (order.completed.length() > 0) {
                     Button btn = (Button) findViewById(order.index);
@@ -89,16 +90,25 @@ public class MainForm extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, OrderForm.class);
-        int index = v.getId();
+        index = v.getId() - 1;
 //        intent.putExtra("index", index);
 //        intent.putExtra("address", orders.get(index).address);
 //        intent.putExtra("comments", orders.get(index).comments);
 //        intent.putExtra("address", orders.get(index).address);
 //        intent.putExtra("address", orders.get(index).address);
 //        intent.putExtra("address", orders.get(index).address);
-        intent.putExtra(Order.class.getCanonicalName(), orders.get(index - 1));
-        startActivity(intent);
-        this.finish();
+        intent.putExtra(Order.class.getCanonicalName(), orders.get(index));
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) {
+            return;
+        }
+        String completed = data.getStringExtra("completed");
+        Order order = orders.get(index);
+        order.completed = completed;
     }
 
     @Override

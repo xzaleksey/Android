@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Courier.iml" filepath="$PROJECT_DIR$/Courier.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aws-android-sdk-core-2.2.3/aws-android-sdk-core-2.2.3.iml" filepath="$PROJECT_DIR$/aws-android-sdk-core-2.2.3/aws-android-sdk-core-2.2.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aws-android-sdk-mobileanalytics-2.2.3/aws-android-sdk-mobileanalytics-2.2.3.iml" filepath="$PROJECT_DIR$/aws-android-sdk-mobileanalytics-2.2.3/aws-android-sdk-mobileanalytics-2.2.3.iml" />
     </modules>
   </component>
 </project>

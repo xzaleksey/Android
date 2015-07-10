@@ -13,11 +13,36 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+import com.amazonaws.mobileconnectors.amazonmobileanalytics.AnalyticsConfig;
+import com.amazonaws.mobileconnectors.amazonmobileanalytics.InitializationException;
+import com.amazonaws.mobileconnectors.amazonmobileanalytics.MobileAnalyticsManager;
+import com.amazonaws.regions.Regions;
+
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
+    private static MobileAnalyticsManager analytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        CognitoCachingCredentialsProvider cognitoProvider = new CognitoCachingCredentialsProvider(
+                this.getApplicationContext(),
+                "COGNITO_IDENTITY_POOL",
+                Regions.US_EAST_1
+        );
+        try {
+            AnalyticsConfig config = new AnalyticsConfig();
+            config.withAllowsWANDelivery(true);
+            analytics = MobileAnalyticsManager.getOrCreateInstance(
+                    this.getApplicationContext(),
+                    "324db7e4dd16494ba9a2219528ac0b33", //Amazon Mobile Analytics App ID
+                    Regions.US_EAST_1,
+                    cognitoProvider,
+                    config);
+        } catch (InitializationException ex) {
+            //Failed to initialize Amazon Mobile Analytics
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         Button btn_enter = (Button) findViewById(R.id.btn_enter);
@@ -76,6 +101,22 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (analytics != null) {
+            analytics.getSessionClient().pauseSession();
+            analytics.getEventClient().submitEvents();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (analytics != null) {
+            analytics.getSessionClient().resumeSession();
+        }
+    }
     @Override
     public void onBackPressed() {
         this.finish();
