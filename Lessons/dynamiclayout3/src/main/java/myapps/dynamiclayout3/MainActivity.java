@@ -61,6 +61,7 @@ SeekBar sbWeight;
         // в текст кнопок пишем значения переменных
         btn1.setText(String.valueOf(leftValue));
         btn2.setText(String.valueOf(rightValue));
+//        btn1.requestLayout();
     }
 
     @Override

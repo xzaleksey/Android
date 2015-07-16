@@ -16,14 +16,18 @@
             <option value="$PROJECT_DIR$/dynamiclayout" />
             <option value="$PROJECT_DIR$/dynamiclayout2" />
             <option value="$PROJECT_DIR$/dynamiclayout3" />
+            <option value="$PROJECT_DIR$/indentfilter" />
             <option value="$PROJECT_DIR$/listener" />
             <option value="$PROJECT_DIR$/logandmess" />
             <option value="$PROJECT_DIR$/menuadv" />
             <option value="$PROJECT_DIR$/menusimple" />
             <option value="$PROJECT_DIR$/onclickbuttons" />
+            <option value="$PROJECT_DIR$/oneactivitystate" />
             <option value="$PROJECT_DIR$/resvalues" />
             <option value="$PROJECT_DIR$/simpleanimation" />
             <option value="$PROJECT_DIR$/simplecalculator" />
+            <option value="$PROJECT_DIR$/twoactivity" />
+            <option value="$PROJECT_DIR$/twoactivitystate" />
             <option value="$PROJECT_DIR$/xmlpullparser" />
           </set>
         </option>
