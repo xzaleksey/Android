@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/dynamiclayout/dynamiclayout.iml" filepath="$PROJECT_DIR$/dynamiclayout/dynamiclayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamiclayout2/dynamiclayout2.iml" filepath="$PROJECT_DIR$/dynamiclayout2/dynamiclayout2.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamiclayout3/dynamiclayout3.iml" filepath="$PROJECT_DIR$/dynamiclayout3/dynamiclayout3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getintentaction/getintentaction.iml" filepath="$PROJECT_DIR$/getintentaction/getintentaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/indentextras/indentextras.iml" filepath="$PROJECT_DIR$/indentextras/indentextras.iml" />
       <module fileurl="file://$PROJECT_DIR$/indentfilter/indentfilter.iml" filepath="$PROJECT_DIR$/indentfilter/indentfilter.iml" />
       <module fileurl="file://$PROJECT_DIR$/listener/listener.iml" filepath="$PROJECT_DIR$/listener/listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/logandmess/logandmess.iml" filepath="$PROJECT_DIR$/logandmess/logandmess.iml" />
