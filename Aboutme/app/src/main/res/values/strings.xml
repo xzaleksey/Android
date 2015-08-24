@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">About me Changed</string>
+    <string name="hello_world">Hello world! Changed</string>
+    <string name="name">Aleksey</string>
+    <string name="surname">Valyakin</string>
+    <string name="patronymic">Vasilievich</string>
+    <string name="email">xzaleksey@gmail.com</string>
+    <string name="my_txt">Портретная ориентация</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="skills">
+        <item>Visual Basic</item>
+        <item>PHP</item>
+        <item>JS</item>
+        <item>CRM systems(SalesForce, Microsoft CRM)</item>
+        <item>Основы SQL</item>
+        <item>Java уровень 1</item>
+    </string-array>
+</resources>
