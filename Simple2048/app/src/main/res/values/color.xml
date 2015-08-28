@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="colors">
+        <item name="def">@color/def</item>
+        <item name="c1">@color/c1</item>
+        <item name="c2">@color/c2</item>
+        <item name="c3">@color/c3</item>
+        <item name="c4">@color/c4</item>
+        <item name="c5">@color/c5</item>
+        <item name="c6">@color/c6</item>
+        <item name="c7">@color/c7</item>
+        <item name="c8">@color/c8</item>
+        <item name="c9">@color/c9</item>
+        <item name="c10">@color/c10</item>
+        <item name="c11">@color/c11</item>
+        <item name="c12">@color/c12</item>
+    </array>
+    <color name="def">#b8b8b8</color>
+    <color name="c1">#a1a1a1</color>
+    <color name="c2">#fff07b</color>
+    <color name="c3">#fffe39</color>
+    <color name="c4">#ff7465</color>
+    <color name="c5">#ff402f</color>
+    <color name="c6">#ff1600</color>
+    <color name="c7">#caffbb</color>
+    <color name="c8">#a4ff8e</color>
+    <color name="c9">#92ff69</color>
+    <color name="c10">#6bff45</color>
+    <color name="c11">#49ff27</color>
+    <color name="c12">#25ff00</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+</resources>

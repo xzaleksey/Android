@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Simple2048</string>
+    <string name="restart">Restart</string>
+    <string name="Result">Счет</string>
+
+    <string-array name="values">
+        <item></item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+        <item>128</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+    </string-array>
+</resources>
