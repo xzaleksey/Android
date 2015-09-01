@@ -6,27 +6,23 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Game {
-    Random random = new Random();
-    private Cell[] cells = new Cell[16];
-    public final int RIGHT = 1, LEFT = 2, UP = 3, DOWN = 4;
+    public static final int RIGHT = 1, LEFT = 2, UP = 3, DOWN = 4;
+    public static final int COUNT = 16;
+
+    private Cell[] cells = new Cell[COUNT];//Массив клеток
+
     private ArrayList<Integer> freePositions = new ArrayList<>();//Свободные позиции
     private ArrayList<Integer> canMove = new ArrayList<>();//Клекти, которые могут передвинуться
     private ArrayList<Integer> movedCells = new ArrayList<>();//Передвинутые клетки
-    private Integer result = 0;
-    private MainActivity.Updater updater; //для обновления Textview
 
-    public String getResult() {
-        return result.toString();
-    }
+    private Integer result = 0; //Результат
+    private Integer record = 0; //Рекорд
 
-    public int getFreePositionsCount() {
-        return freePositions.size();
-    }
+    private MainActivity.Updater updater; //для обновления TextView
 
-    public void setUpdater(MainActivity.Updater updater) {
-        this.updater = updater;
-    }
+    private Random random = new Random();
 
+    //Инициализация клеток
     public Game() {
         for (int i = 0; i < cells.length; i++) {
             cells[i] = new Cell(i, "");
@@ -56,6 +52,27 @@ public class Game {
         }
     }
 
+    public void setResult(String result) {
+        this.result = Integer.parseInt(result);
+    }
+
+    public String getResult() {
+        return result.toString();
+    }
+
+    private void setResult(int value) {
+        result += value;
+    }
+
+    public int getFreePositionsCount() {
+        return freePositions.size();
+    }
+
+    public void setUpdater(MainActivity.Updater updater) {
+        this.updater = updater;
+    }
+
+    //Создание пустых позиций
     private void createFreePositions() {
         freePositions.clear();
         for (int i = 0; i < cells.length; i++) {
@@ -66,13 +83,14 @@ public class Game {
     //Проверка на проигрыш
     public boolean checkEndGame() {
         if (freePositions.size() == 0) {
-            for (int i = 0; i < 16; i++) {
+            for (int i = 0; i < COUNT; i++) {
                 CharSequence value = cells[i].value;
                 if (checkAdjustCell(value, cells[i].right)) return false;
                 if (checkAdjustCell(value, cells[i].up)) return false;
                 if (checkAdjustCell(value, cells[i].down)) return false;
                 if (checkAdjustCell(value, cells[i].left)) return false;
             }
+            record = result > record ? result : record;
             return true;
         }
         return false;
@@ -141,7 +159,7 @@ public class Game {
             if (canMove.size() > 0) {
                 for (Integer ind : canMove) {
                     Cell adjustCell = direction == UP ? cells[ind].up : direction == DOWN ? cells[ind].down : direction == RIGHT ? cells[ind].right : cells[ind].left;
-                    if (adjustCell.value == "") {
+                    if (adjustCell.value.equals("")) {
                         adjustCell.value = cells[ind].value;
                         if (cells[ind].changed) {
                             cells[ind].changed = false;
@@ -175,10 +193,6 @@ public class Game {
         return value.toString();
     }
 
-    private void setResult(int value) {
-        result += value;
-    }
-
     //Проверка на существование ходов
     public void checkMoves(int index, int direction) {
         Cell checked = null;
@@ -206,38 +220,63 @@ public class Game {
             } else if (direction == RIGHT) {
                 checked = cells[i].right;
             }
-            if (cells[i].value == "" || null == checked) continue;
+            if (cells[i].value.equals("") || null == checked) continue;
             if (!checked.changed && !cells[i].changed)
                 if (checked.value.equals("") || cells[i].value.equals(checked.value))
                     canMove.add(i);
         }
     }
 
+    //Новая клетка
     public int newCell() {
         int pos = random.nextInt(freePositions.size());
         int id = freePositions.remove(pos);
-        cells[id].value = "2";
+        cells[id].value = random.nextInt(10) == 9 ? "4" : "2";
         return id;
     }
 
+    //Начать игру заново
     public void resetGame() {
         resetCellsValues();
         createFreePositions();
         result = 0;
     }
 
+    //Сброс значений клеток
     private void resetCellsValues() {
         for (Cell cell : cells) {
             cell.value = "";
         }
     }
 
+    //Задать значения клеткам
+    public void setCellsValues(String[] cellsValues) {
+        createFreePositions();
+        for (int i = 0; i < COUNT; i++) {
+            CharSequence value = cellsValues[i];
+            cells[i].value = value.equals("0") ? "" : value;
+            if (!cellsValues[i].equals("0")) {
+                freePositions.remove(Integer.valueOf(i));
+            }
+        }
+    }
+
+    //Сброс проверки на изменение
     private void resetCellsChanged() {
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < COUNT; i++) {
             cells[i].changed = false;
         }
     }
 
+    public String getRecord() {
+        return record.toString();
+    }
+
+    public void setRecord(String record) {
+        this.record = Integer.parseInt(record);
+    }
+
+    //Клетка
     private static class Cell {
         final int position;
         CharSequence value;

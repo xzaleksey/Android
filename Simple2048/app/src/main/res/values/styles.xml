@@ -5,15 +5,21 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="TableItem">
+    <style name="table_item">
         <item name="android:background">@drawable/shape</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="llResult" parent="TableItem">
+    <style name="ll_result" parent="table_item">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
         <item name="android:background">@drawable/shapeblack</item>
         <item name="android:layout_marginTop">50dp</item>
         <item name="android:orientation">vertical</item>
@@ -21,7 +27,7 @@
     <style name="results">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 </resources>
