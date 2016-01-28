@@ -1,5 +1,6 @@
 package com.valyakinaleksey.espressotest;
 
+import android.os.SystemClock;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -21,7 +22,7 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.argThat;
 import static org.mockito.Matchers.eq;
@@ -43,9 +44,10 @@ public class HelloWorldEspressoTest {
 
     @Test
     public void textChangeCheck() {
-        onView(withText("Hello world!")).check(matches(isDisplayed()));
+        onView(withId(R.id.textFront)).check(matches(isDisplayed()));
         onView(withId(R.id.btn_change_text)).perform(click());
-        onView(withId(R.id.text)).check(matches(withText("Hello Espresso!")));
+        SystemClock.sleep(1000);
+        onView(withId(R.id.textFront)).check(matches(not(isDisplayed())));
     }
 
     @Test
