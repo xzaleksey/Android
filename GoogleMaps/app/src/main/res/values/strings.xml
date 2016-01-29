@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GoogleMaps</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="go_to_sydney">Sydney</string>
+    <string name="go_to_san_fran">San Fransisco</string>
+    <string name="go_to_santorini">Santorini</string>
+    <string name="go_to_invalid">Invalid</string>
+    <string name="duration">Duration</string>
+    <string name="zoom_out">Zoom out</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="right_arrow">Right</string>
+    <string name="down_arrow">Down</string>
+    <string name="up_arrow">Up</string>
+    <string name="left_arrow">Left</string>
+    <string name="walk_panorama">Walk</string>
+    <string name="request_position">Request position</string>
+    <string name="panorama_not_ready">Panorama is not ready</string>
+</resources>
