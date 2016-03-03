@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_padding">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_period_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/period_days"
+                android:inputType="numberDecimal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_date_notification_header"
+                style="@style/TextviewSecondaryMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_period_days"
+                android:layout_marginTop="@dimen/common_margin"
+                android:text="@string/period_date_start"
+                android:textColor="@color/accent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_date_notification_header"
+                android:background="@color/accent" />
+
+            <TextView
+                android:id="@+id/tv_date_start"
+                style="@android:style/Widget.Material.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_date_notification_header"
+                android:layout_marginTop="@dimen/common_margin"
+                android:text="@string/no_notification"
+                android:textColor="@color/secondary_text" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
